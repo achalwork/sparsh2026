@@ -2,6 +2,8 @@ import logoUrl from '../assets/logo.png';
 export const W=900,H=1600,PH={x:318,y:567,w:264,h:324};
 const G='#14452c',GOLD='#c49a3c',L1='#5f9a4f',L2='#7fb069';
 const FONTS=['800 40px "Playfair Display"','900 40px "Playfair Display"','700 40px "Playfair Display"','600 40px "Playfair Display"','italic 500 30px "Lora"','500 20px "Lora"','600 30px "Lora"','700 30px "Lora"','600 40px "Dancing Script"','700 40px "Dancing Script"'];
+// >>> CHANGE THIS to the real contact number <<<
+const CONTACT_PHONE='+91 00000 00000';
 let logo=null;
 export async function loadAssets(){
  try{await Promise.all(FONTS.map(f=>document.fonts.load(f,'Aa 2026 Join')))}catch(e){}
@@ -46,19 +48,20 @@ export function draw(cv,st,scale=1){
   T(c,'UPLOAD YOUR',450,805,'600 24px "Lora"','#3d8a63');T(c,'PHOTO',450,835,'600 24px "Lora"','#3d8a63');c.lineCap='butt'}
  if(name.trim()){let n=name.trim(),fs=36;const F=s=>`700 ${s}px "Playfair Display"`;c.font=F(fs);while(c.measureText(n).width>600&&fs>18){fs--;c.font=F(fs)}
   if(c.measureText(n).width>600){while(c.measureText(n+'…').width>600)n=n.slice(0,-1);n+='…'}T(c,n,449,942,F(fs),G)}
- T(c,'I Invite You to Attend',449,1010,'700 66px "Dancing Script"',G);
- T(c,'SPARSH 2026',449,1100,'900 82px "Playfair Display"',G);
- T(c,'Let’s Learn  •  Experience  •  Practise  •  Integrate',449,1142,'italic 500 31px "Lora"',G);
- orn(c,449,1168,300);
- c.strokeStyle=G;c.lineWidth=3;rr(c,206,1190,44,40,6);c.stroke();c.fillStyle=G;c.fillRect(206,1190,44,12);
- for(let i=0;i<9;i++)c.fillRect(214+(i%3)*12,1208+Math.floor(i/3)*7,7,4);
- T(c,'18–20 NOVEMBER 2026',478,1222,'700 36px "Lora"',G);
- orn(c,449,1250,250);T(c,'9th National Naturopathy Day Celebration',449,1282,'600 26px "Lora"','#6b4f1d');
- c.fillStyle=G;c.beginPath();c.arc(176,1330,15,Math.PI,0);c.lineTo(176,1365);c.closePath();c.fill();c.fillStyle='#fdf9e9';c.beginPath();c.arc(176,1330,6,0,7);c.fill();
- T(c,'Government Yoga & Naturopathy College and Hospital',206,1342,'700 22px "Lora"',G,'left');
- T(c,'Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra',206,1366,'500 20px "Lora"',G,'left');
- c.strokeStyle=GOLD;c.lineWidth=1.5;c.beginPath();c.moveTo(225,1390);c.lineTo(673,1390);c.stroke();
- T(c,'Be a Part of the Learning.',449,1440,'600 38px "Dancing Script"',G);T(c,'Be a Part of the Change.',449,1482,'600 38px "Dancing Script"',G);
+ T(c,'I Invite You to Attend',449,1035,'700 66px "Dancing Script"',G);
+ T(c,'SPARSH 2026',449,1122,'900 82px "Playfair Display"',G);
+ T(c,'Let’s Learn  •  Experience  •  Practise  •  Integrate',449,1162,'italic 500 31px "Lora"',G);
+ orn(c,449,1186,300);
+ c.strokeStyle=G;c.lineWidth=3;rr(c,206,1207,44,40,6);c.stroke();c.fillStyle=G;c.fillRect(206,1207,44,12);
+ for(let i=0;i<9;i++)c.fillRect(214+(i%3)*12,1225+Math.floor(i/3)*7,7,4);
+ T(c,'18–20 NOVEMBER 2026',478,1239,'700 36px "Lora"',G);
+ orn(c,449,1268,250);T(c,'9th National Naturopathy Day Celebration',449,1298,'600 26px "Lora"','#6b4f1d');
+ c.fillStyle=G;c.beginPath();c.arc(176,1347,15,Math.PI,0);c.lineTo(176,1382);c.closePath();c.fill();c.fillStyle='#fdf9e9';c.beginPath();c.arc(176,1347,6,0,7);c.fill();
+ T(c,'Government Yoga & Naturopathy College and Hospital',206,1359,'700 22px "Lora"',G,'left');
+ T(c,'Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra',206,1383,'500 20px "Lora"',G,'left');
+ c.strokeStyle=GOLD;c.lineWidth=1.5;c.beginPath();c.moveTo(225,1408);c.lineTo(673,1408);c.stroke();
+ T(c,'For attending this event, contact us',449,1450,'italic 500 28px "Lora"',G);
+ T(c,CONTACT_PHONE,449,1494,'800 46px "Playfair Display"',G);
  c.fillStyle=G;c.beginPath();c.moveTo(0,1548);c.bezierCurveTo(250,1503,450,1573,900,1533);c.lineTo(900,1600);c.lineTo(0,1600);c.fill();
  c.strokeStyle=GOLD;c.lineWidth=3;c.beginPath();c.moveTo(0,1548);c.bezierCurveTo(250,1503,450,1573,900,1533);c.stroke();
 }

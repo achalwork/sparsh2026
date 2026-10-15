@@ -4,7 +4,7 @@ import photo from '../assets/professor.jpg';
 export default function ProfessorHero(){return(
 <div className="hero-bg"><section className="hero"><div className="hero-text">
 <span className="tag">SPARSH 2026 | National Naturopathy Day</span>
-<h1>Assistant Professor<br/><em>Shweta Shete</em></h1>
+<h1><em>Dr. Shweta Shete</em><span className="role">Assistant Professor</span></h1>
 <p className="inst">Government Yoga &amp; Naturopathy College and Hospital</p>
 <p className="addr">Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra</p>
 <p className="intro">Join us for an inspiring journey of learning, experience, practice and integration.</p>
