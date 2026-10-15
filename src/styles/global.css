@@ -57,7 +57,7 @@ h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
 .wrap{position:relative;width:min(100%,var(--pw));container-type:inline-size;padding:10px;background:#fff;border:2px solid var(--gold);border-radius:20px;box-shadow:0 20px 50px rgba(20,69,44,.22)}
 .poster{display:block;width:100%;aspect-ratio:9/16;border-radius:10px;touch-action:none;background:#fff}
 .pick{cursor:pointer}.grab{cursor:grab}
-.nameinp{position:absolute;left:12%;width:76%;top:57.9%;height:3%;background:transparent;border:0;outline:0;text-align:center;color:transparent;caret-color:#14452c;font:700 4cqw 'Playfair Display',serif;padding:0}
+.nameinp{position:absolute;left:12%;width:76%;top:58.3%;height:3%;background:transparent;border:0;outline:0;text-align:center;color:transparent;caret-color:#14452c;font:700 4cqw 'Playfair Display',serif;padding:0}
 .nameinp::placeholder{color:rgba(20,69,44,.45);font-style:italic;font-weight:500;font-size:3.2cqw}
 .nameinp:placeholder-shown{border-bottom:2px dashed rgba(196,154,60,.8)}
 .tools{display:flex;flex-wrap:wrap;gap:8px;width:100%;align-items:center;background:#fff;padding:12px;border-radius:14px}

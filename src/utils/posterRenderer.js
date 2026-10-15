@@ -47,10 +47,10 @@ export function draw(cv,st,scale=1){
  else{c.strokeStyle='#2f7a55';c.lineWidth=5;c.lineCap='round';c.beginPath();c.arc(450,690,19,0,7);c.stroke();c.beginPath();c.arc(450,748,31,Math.PI,0);c.stroke();
   T(c,'UPLOAD YOUR',450,805,'600 24px "Lora"','#3d8a63');T(c,'PHOTO',450,835,'600 24px "Lora"','#3d8a63');c.lineCap='butt'}
  if(name.trim()){let n=name.trim(),fs=36;const F=s=>`700 ${s}px "Playfair Display"`;c.font=F(fs);while(c.measureText(n).width>600&&fs>18){fs--;c.font=F(fs)}
-  if(c.measureText(n).width>600){while(c.measureText(n+'…').width>600)n=n.slice(0,-1);n+='…'}T(c,n,449,960,F(fs),G)}
- T(c,'I Invite You to Attend',449,1078,'700 66px "Dancing Script"',G);
- T(c,'SPARSH 2026',449,1156,'900 76px "Playfair Display"',G);
- T(c,'Let’s Learn  •  Experience  •  Practise  •  Integrate',449,1192,'italic 500 31px "Lora"',G);
+  if(c.measureText(n).width>600){while(c.measureText(n+'…').width>600)n=n.slice(0,-1);n+='…'}T(c,n,449,966,F(fs),G)}
+ T(c,'I Invite You to Attend',449,1050,'700 66px "Dancing Script"',G);
+ T(c,'SPARSH 2026',449,1136,'900 76px "Playfair Display"',G);
+ T(c,'Let’s Learn  •  Experience  •  Practise  •  Integrate',449,1180,'italic 500 31px "Lora"',G);
  orn(c,449,1212,300);
  c.strokeStyle=G;c.lineWidth=3;rr(c,206,1226,44,40,6);c.stroke();c.fillStyle=G;c.fillRect(206,1226,44,12);
  for(let i=0;i<9;i++)c.fillRect(214+(i%3)*12,1244+Math.floor(i/3)*7,7,4);
