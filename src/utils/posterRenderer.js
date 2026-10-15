@@ -3,7 +3,7 @@ export const W=900,H=1600,PH={x:318,y:567,w:264,h:324};
 const G='#14452c',GOLD='#c49a3c',L1='#5f9a4f',L2='#7fb069';
 const FONTS=['800 40px "Playfair Display"','900 40px "Playfair Display"','700 40px "Playfair Display"','600 40px "Playfair Display"','italic 500 30px "Lora"','500 20px "Lora"','600 30px "Lora"','700 30px "Lora"','600 40px "Dancing Script"','700 40px "Dancing Script"'];
 // >>> CHANGE THIS to the real contact number <<<
-const CONTACT_PHONE='+91 00000 00000';
+const CONTACT_PHONE='+91 79723 57362';
 let logo=null;
 export async function loadAssets(){
  try{await Promise.all(FONTS.map(f=>document.fonts.load(f,'Aa 2026 Join')))}catch(e){}
@@ -24,18 +24,18 @@ export function draw(cv,st,scale=1){
  const{name='',img=null,zoom=1,ox=0,oy=-.3}=st;cv.width=W*scale;cv.height=H*scale;const c=cv.getContext('2d');
  c.scale(scale,scale);c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';
  const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,'#fdf9e9');g.addColorStop(1,'#f6efd4');c.fillStyle=g;c.fillRect(0,0,W,H);
- sprig(c,-6,20,.9,95,3,.9);sprig(c,W+6,40,Math.PI-.9,90,3,.9);sprig(c,-10,1420,-.6,150,4,1.2);sprig(c,W+10,1440,Math.PI+.6,130,4,1.1);
+ sprig(c,-6,20,.9,95,3,.9);sprig(c,W+6,24,Math.PI-.9,62,3,.65);sprig(c,-10,1420,-.6,150,4,1.2);sprig(c,W+10,1440,Math.PI+.6,130,4,1.1);
  if(logo)c.drawImage(logo,70,25,158,137);
  T(c,'Government Yoga & Naturopathy',448,56,'700 28px "Playfair Display"',G);T(c,'College and Hospital',448,86,'700 28px "Playfair Display"',G);
  T(c,'Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra',448,115,'500 15px "Lora"',G);
- leaf(c,708,62,30,-1.9,GOLD);leaf(c,708,62,30,-1.2,'#d8b45a');
- T(c,'9',770,78,'800 54px "Playfair Display"',G,'right');T(c,'th',796,52,'700 22px "Playfair Display"',G,'right');
- T(c,'NATIONAL',768,113,'700 18px "Lora"',G);T(c,'NATUROPATHY DAY',768,134,'700 18px "Lora"',G);T(c,'2026',768,162,'700 26px "Playfair Display"',GOLD);
+ leaf(c,702,62,30,-1.9,GOLD);leaf(c,702,62,30,-1.2,'#d8b45a');
+ T(c,'9',756,78,'800 54px "Playfair Display"',G,'right');T(c,'th',781,52,'700 22px "Playfair Display"',G,'right');
+ T(c,'NATIONAL',752,113,'700 16px "Lora"',G);T(c,'NATUROPATHY DAY',752,134,'700 16px "Lora"',G);T(c,'2026',752,162,'700 26px "Playfair Display"',GOLD);
  orn(c,448,157,205);
  T(c,'Join Me',448,262,'700 100px "Dancing Script"',G);T(c,'at',448,298,'italic 500 30px "Lora"',G);
  c.font='900 118px "Playfair Display"';const a=c.measureText('SPARSH').width;c.font='800 98px "Playfair Display"';const b=c.measureText('2026').width,x0=(W-(a+b+14))/2;
  T(c,'SPARSH',x0,405,'900 118px "Playfair Display"',G,'left');T(c,'2026',x0+a+14,405,'800 98px "Playfair Display"',G,'left');
- T(c,'National Hands-on Training Workshop',448,452,'700 35px "Playfair Display"',G);T(c,'on',448,474,'600 18px "Lora"',G);
+ T(c,'National Hands-on Training Workshop',448,446,'700 35px "Playfair Display"',G);T(c,'on',448,469,'600 16px "Lora"',G);
  c.fillStyle=GOLD;c.beginPath();c.moveTo(72,482);c.lineTo(108,482);c.lineTo(96,509);c.lineTo(108,536);c.lineTo(72,536);c.lineTo(84,509);c.fill();
  c.beginPath();c.moveTo(828,482);c.lineTo(792,482);c.lineTo(804,509);c.lineTo(792,536);c.lineTo(828,536);c.lineTo(816,509);c.fill();
  c.fillStyle=G;c.fillRect(92,482,716,54);T(c,'Integrative & Multimodal Pain Management',448,520,'700 31px "Playfair Display"','#fff');
@@ -47,20 +47,20 @@ export function draw(cv,st,scale=1){
  else{c.strokeStyle='#2f7a55';c.lineWidth=5;c.lineCap='round';c.beginPath();c.arc(450,690,19,0,7);c.stroke();c.beginPath();c.arc(450,748,31,Math.PI,0);c.stroke();
   T(c,'UPLOAD YOUR',450,805,'600 24px "Lora"','#3d8a63');T(c,'PHOTO',450,835,'600 24px "Lora"','#3d8a63');c.lineCap='butt'}
  if(name.trim()){let n=name.trim(),fs=36;const F=s=>`700 ${s}px "Playfair Display"`;c.font=F(fs);while(c.measureText(n).width>600&&fs>18){fs--;c.font=F(fs)}
-  if(c.measureText(n).width>600){while(c.measureText(n+'…').width>600)n=n.slice(0,-1);n+='…'}T(c,n,449,942,F(fs),G)}
- T(c,'I Invite You to Attend',449,1035,'700 66px "Dancing Script"',G);
- T(c,'SPARSH 2026',449,1122,'900 82px "Playfair Display"',G);
- T(c,'Let’s Learn  •  Experience  •  Practise  •  Integrate',449,1162,'italic 500 31px "Lora"',G);
- orn(c,449,1186,300);
- c.strokeStyle=G;c.lineWidth=3;rr(c,206,1207,44,40,6);c.stroke();c.fillStyle=G;c.fillRect(206,1207,44,12);
- for(let i=0;i<9;i++)c.fillRect(214+(i%3)*12,1225+Math.floor(i/3)*7,7,4);
- T(c,'18–20 NOVEMBER 2026',478,1239,'700 36px "Lora"',G);
- orn(c,449,1268,250);T(c,'9th National Naturopathy Day Celebration',449,1298,'600 26px "Lora"','#6b4f1d');
- c.fillStyle=G;c.beginPath();c.arc(176,1347,15,Math.PI,0);c.lineTo(176,1382);c.closePath();c.fill();c.fillStyle='#fdf9e9';c.beginPath();c.arc(176,1347,6,0,7);c.fill();
- T(c,'Government Yoga & Naturopathy College and Hospital',206,1359,'700 22px "Lora"',G,'left');
- T(c,'Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra',206,1383,'500 20px "Lora"',G,'left');
- c.strokeStyle=GOLD;c.lineWidth=1.5;c.beginPath();c.moveTo(225,1408);c.lineTo(673,1408);c.stroke();
- T(c,'For attending this event, contact us',449,1450,'italic 500 28px "Lora"',G);
+  if(c.measureText(n).width>600){while(c.measureText(n+'…').width>600)n=n.slice(0,-1);n+='…'}T(c,n,449,960,F(fs),G)}
+ T(c,'I Invite You to Attend',449,1078,'700 66px "Dancing Script"',G);
+ T(c,'SPARSH 2026',449,1156,'900 76px "Playfair Display"',G);
+ T(c,'Let’s Learn  •  Experience  •  Practise  •  Integrate',449,1192,'italic 500 31px "Lora"',G);
+ orn(c,449,1212,300);
+ c.strokeStyle=G;c.lineWidth=3;rr(c,206,1226,44,40,6);c.stroke();c.fillStyle=G;c.fillRect(206,1226,44,12);
+ for(let i=0;i<9;i++)c.fillRect(214+(i%3)*12,1244+Math.floor(i/3)*7,7,4);
+ T(c,'18–20 NOVEMBER 2026',478,1258,'700 36px "Lora"',G);
+ orn(c,449,1285,250);T(c,'9th National Naturopathy Day Celebration',449,1311,'600 26px "Lora"','#6b4f1d');
+ c.fillStyle=G;c.beginPath();c.arc(176,1350,15,Math.PI,0);c.lineTo(176,1385);c.closePath();c.fill();c.fillStyle='#fdf9e9';c.beginPath();c.arc(176,1350,6,0,7);c.fill();
+ T(c,'Government Yoga & Naturopathy College and Hospital',206,1361,'700 22px "Lora"',G,'left');
+ T(c,'Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra',206,1385,'500 20px "Lora"',G,'left');
+ c.strokeStyle=GOLD;c.lineWidth=1.5;c.beginPath();c.moveTo(225,1405);c.lineTo(673,1405);c.stroke();
+ T(c,'For attending this workshop, contact us',449,1446,'italic 500 28px "Lora"',G);
  T(c,CONTACT_PHONE,449,1494,'800 46px "Playfair Display"',G);
  c.fillStyle=G;c.beginPath();c.moveTo(0,1548);c.bezierCurveTo(250,1503,450,1573,900,1533);c.lineTo(900,1600);c.lineTo(0,1600);c.fill();
  c.strokeStyle=GOLD;c.lineWidth=3;c.beginPath();c.moveTo(0,1548);c.bezierCurveTo(250,1503,450,1573,900,1533);c.stroke();

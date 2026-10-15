@@ -1,5 +1,4 @@
 import {Chips} from './Sections.jsx';
-import {CalendarDays,MapPin,Leaf} from 'lucide-react';
 import photo from '../assets/professor.jpg';
 export default function ProfessorHero(){return(
 <div className="hero-bg"><section className="hero"><div className="hero-text">

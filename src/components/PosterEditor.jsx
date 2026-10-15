@@ -33,18 +33,22 @@ export default function PosterEditor(){
    <canvas ref={cv} className={editing?'poster grab':img?'poster':'poster pick'} onClick={pick} onPointerDown={down} onPointerMove={move} onPointerUp={()=>dr.current=null} onPointerCancel={()=>dr.current=null}/>
    <input className="nameinp" value={name} maxLength={80} onChange={e=>setName(e.target.value)} placeholder="Tap here to type your name" aria-label="Student name"/>
   </div>
-  {editing&&<div className="tools">
-   <button className="btn" onClick={()=>setV({...v,zoom:cl(v.zoom-.1,1,4)})}><ZoomOut size={16}/></button>
-   <input type="range" min="1" max="4" step=".01" value={v.zoom} onChange={e=>setV({...v,zoom:+e.target.value})}/>
-   <button className="btn" onClick={()=>setV({...v,zoom:cl(v.zoom+.1,1,4)})}><ZoomIn size={16}/></button>
-   <button className="btn" onClick={()=>fi.current.click()}><Upload size={16}/>Change</button>
-   <button className="btn" onClick={()=>setV(D)}><RotateCcw size={16}/>Reset</button>
-   <button className="btn" onClick={remove}><Trash2 size={16}/>Remove</button>
-   <button className="btn solid done" onClick={()=>setLocked(true)}><Check size={18}/>Done</button></div>}
-  {img&&locked&&<div className="tools lockedbar"><span>✓ Photo set</span>
-   <button className="btn" onClick={()=>setLocked(false)}><Pencil size={16}/>Edit Photo</button>
-   <button className="btn" onClick={remove}><Trash2 size={16}/>Remove</button></div>}
  </div>
- <aside className="side"><div className="card"><h3>Your invitation</h3>
-   <button className="btn solid" onClick={save}><Download size={18}/>Download My Poster</button>
-   <p className="hint" style={{marginTop:12}}>High resolution 1800 × 3200 px, ready for WhatsApp and social media.</p></div></aside></div></section>)}
+ <aside className="side">
+   {editing&&<div className="tools">
+    <b className="tt">Adjust your photo</b>
+    <div className="zoomrow"><button className="btn" onClick={()=>setV({...v,zoom:cl(v.zoom-.1,1,4)})} aria-label="Zoom out"><ZoomOut size={16}/></button>
+    <input type="range" min="1" max="4" step=".01" value={v.zoom} onChange={e=>setV({...v,zoom:+e.target.value})}/>
+    <button className="btn" onClick={()=>setV({...v,zoom:cl(v.zoom+.1,1,4)})} aria-label="Zoom in"><ZoomIn size={16}/></button></div>
+    <div className="tg3">
+     <button className="btn" onClick={()=>fi.current.click()}><Upload size={16}/>Change</button>
+     <button className="btn" onClick={()=>setV(D)}><RotateCcw size={16}/>Reset</button>
+     <button className="btn" onClick={remove}><Trash2 size={16}/>Remove</button></div>
+    <button className="btn solid done" onClick={()=>setLocked(true)}><Check size={18}/>Done</button></div>}
+   {img&&locked&&<div className="tools">
+    <div className="okmsg"><span className="okdot"><Check size={15}/></span>Photo set</div>
+    <div className="tg2">
+     <button className="btn" onClick={()=>setLocked(false)}><Pencil size={16}/>Edit Photo</button>
+     <button className="btn" onClick={remove}><Trash2 size={16}/>Remove</button></div></div>}
+   <button className="btn solid dl" onClick={save}><Download size={18}/>Download My Poster</button>
+  </aside></div></section>)}
