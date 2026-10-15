@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /submissions/{id} {
+      allow create: if request.resource.size < 900000;  // students can only add
+      allow read, update, delete: if false;             // only you (via console) can view
+    }
+  }
+}

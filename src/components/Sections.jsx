@@ -1,0 +1,8 @@
+import {Calendar,MapPin,Award,Upload,PenLine,Download,Leaf} from 'lucide-react';
+import logo from '../assets/logo.png';
+export const Navbar=()=>(<header className="nav"><div className="nav-in"><div className="brand"><img src={logo} alt="College logo"/><div><b>SPARSH 2026</b><small>Government Yoga &amp; Naturopathy College</small></div></div><a className="btn solid sm" href="#poster">Create My Poster</a></div></header>);
+export const Chips=()=>(<div className="chips"><span><Calendar size={16}/>18–20 November 2026</span><span><MapPin size={16}/>Kolhapur, Maharashtra</span><span><Award size={16}/>9th National Naturopathy Day</span></div>);
+export const Steps=()=>(<section className="steps"><p className="eyebrow">Simple &amp; quick</p><h2>Your invitation in 3 steps</h2><div className="step-grid">
+{[[Upload,'Upload your photo','Tap the photo frame on the poster and choose your picture.'],[PenLine,'Type your name','Write your full name below the photo. It updates live.'],[Download,'Download &amp; share','Get a high-quality PNG or JPG and share it with friends.']].map(([I,t,d],i)=>(
+<div className="step" key={i}><div className="ico"><I size={26}/></div><span className="num">0{i+1}</span><h3 dangerouslySetInnerHTML={{__html:t}}/><p>{d}</p></div>))}</div></section>);
+export const Footer=()=>(<footer className="foot"><Leaf size={28}/><h3>SPARSH 2026</h3><p>National Hands-on Training Workshop on Integrative &amp; Multimodal Pain Management</p><p className="sm">Government Yoga &amp; Naturopathy College and Hospital · Uttur/Bahirewadi, Tal. Ajara, Dist. Kolhapur, Maharashtra</p><p className="gold">Be a Part of the Learning. Be a Part of the Change.</p></footer>);
